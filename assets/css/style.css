@@ -1,0 +1,287 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+a {
+    font-family: Arial, sans-serif; /* Cambia la tipografía a la que desees */
+    font-size: 16px; /* Tamaño de fuente común */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #c2af9e;
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(
+        rgba(34, 34, 34, 0.6),
+        rgba(34, 34, 34, 0.6)
+    ), url("https://images.pexels.com/photos/2397434/pexels-photo-2397434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+}
+
+.header-container-inner {
+    height: 250px;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* Estilos para botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff5500; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05); /* Escala ligeramente el botón al pasar el mouse */
+}
+
+/* Estilos para botones secundarios */
+.btn-secondary {
+    background-color: #c2af9e; /* Color de fondo secundario */
+    color: #fff; /* Color de texto secundario */
+}
+
+.btn-secondary:hover {
+    background-color: #444; /* Cambio de color secundario al pasar el mouse */
+}
+
+/* Estilos para botones de enlace */
+.btn-link {
+    background-color: transparent;
+    border: none;
+    color: #ff6600; /* Color del enlace */
+    font-weight: normal;
+}
+
+.btn-link:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Estilos para la estructura del encabezado */
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 100px;
+    padding: 25px;
+}
+
+/* Estilos para el menú de navegación */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin-right: 35px;
+    gap: 2.5em;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px;
+    margin-left: 220px; /* Deja espacio para el menú */
+}
+
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Efecto de transformación en la imagen */
+}
+
+.image img {
+    max-width: 100%;
+}
+
+.image .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.05); /* Escala la imagen al pasar el mouse */
+}
+
+.image:hover .image-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Estilos para el pie de página */
+.footer {
+    font-family: Arial, sans-serif; /* Cambia la tipografía a la que desees */
+    font-size: 16px; /* Tamaño de fuente común */
+    background: #c2af9e;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0;
+    padding: 0.6% 0;
+    color: #695849;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: #695849;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0 1%;
+}
+
+@media (max-width: 720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .footer .row a i {
+        margin: 0 3%;
+    }
+}
+
+.contact-info, .social-links {
+    flex: 1;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.about-us {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.about-us h2 {
+    font-size: 24px;
+    color: #c2af9e;
+}
+
+.about-us p {
+    font-size: 16px;
+    color: #666;
+}
+
+.enlace {
+    color: #c2af9e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.enlace:hover {
+    color: #F7E6A6;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    nav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: #c2af9e;
+    }
+
+    .menu {
+        flex-direction: row;
+        margin-top: 0;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 200px;
+        background-color: #c2af9e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main {
+        margin-left: 220px;
+    }
+}

@@ -26,7 +26,7 @@ header {
 }
 
 .header-container-inner {
-    height: 250px;
+    height: 400px;
     margin-top: 60px;
     padding-bottom: 20px;
     width: 100%;
@@ -255,6 +255,10 @@ main {
         height: auto;
         background-color: #c2af9e;
     }
+    .image-gallery {
+        grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
+    }
+
 
     .menu {
         flex-direction: row;
@@ -284,4 +288,7 @@ main {
     main {
         margin-left: 220px;
     }
+}
+.image-gallery {
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en desktop */
 }
